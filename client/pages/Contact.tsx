@@ -70,7 +70,7 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow hover:opacity-90 disabled:opacity-50"
+                className="inline-flex items-center justify-center rounded-md bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-white shadow hover:opacity-95 disabled:opacity-50"
               >
                 {submitting ? "Envoi..." : "Envoyer"}
               </button>
