@@ -14,7 +14,17 @@ export function Footer() {
       <div className="container py-10 grid gap-8 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <img src="https://cdn.builder.io/api/v1/image/assets%2F8806f0c19dd2496fae3def528f72d980%2F27917fa20e2a4851901cb54c49b4439e?format=webp&width=800" alt="GRANDI SOLUTIONS logo" className="h-8 w-8 object-contain rounded-md" />
+            <div className="h-8 w-8 rounded-md bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--accent))] grid place-items-center shadow-sm">
+              <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+                <defs>
+                  <linearGradient id="gsgf" x1="0" x2="1" y1="0" y2="0">
+                    <stop offset="0" stopColor="white" stopOpacity="1"/>
+                    <stop offset="1" stopColor="white" stopOpacity="0.9"/>
+                  </linearGradient>
+                </defs>
+                <text x="0" y="14" fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto" fontWeight="700" fontSize="14" fill="url(#gsgf)">GS</text>
+              </svg>
+            </div>
             <span className="text-lg font-semibold tracking-tight">{company.name}</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-prose">
