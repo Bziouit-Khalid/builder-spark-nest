@@ -69,7 +69,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 189 70% 60%;
+    --primary: 213 95% 50%; /* lighter blue for dark mode */
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -78,7 +78,7 @@
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
 
-    --accent: 40 85% 50%;
+    --accent: 24 100% 50%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 62.8% 30.6%;
@@ -86,7 +86,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 189 70% 60%;
+    --ring: 213 95% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
