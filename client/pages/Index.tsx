@@ -55,16 +55,16 @@ export default function Index() {
             <Link
               key={s.id}
               to="/services"
-              className="group rounded-xl border bg-card p-6 shadow-sm transition hover:shadow-md"
+              className="group rounded-xl border-l-4 border-primary/40 bg-card p-6 shadow-sm transition hover:shadow-md"
             >
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-[hsl(var(--primary))]/10 text-[hsl(var(--primary))] ring-1 ring-[hsl(var(--primary))]/10">
                 {s.id === "platrerie" && <Hammer className="h-5 w-5" />}
                 {s.id === "faux-plafonds" && <Layers className="h-5 w-5" />}
                 {s.id === "renovations" && <Wrench className="h-5 w-5" />}
               </div>
               <h3 className="mt-4 text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{s.description}</p>
-              <span className="mt-4 inline-flex items-center text-sm font-medium text-primary">
+              <span className="mt-4 inline-flex items-center text-sm font-medium text-[hsl(var(--accent))]">
                 En savoir plus <ArrowRight className="ml-1 h-4 w-4" />
               </span>
             </Link>
