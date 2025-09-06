@@ -9,15 +9,19 @@ export function Header() {
     <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-background/80">
       <div className="container flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-2">
-          <div className="h-8 w-8 rounded-md bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--accent))] grid place-items-center shadow-sm">
-            <svg width="28" height="18" viewBox="0 0 28 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <div className="h-10 w-10 rounded-md bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--accent))] grid place-items-center shadow-sm ring-1 ring-white/20">
+            <svg viewBox="0 0 100 100" width="36" height="36" xmlns="http://www.w3.org/2000/svg" aria-hidden>
               <defs>
-                <linearGradient id="gsg" x1="0" x2="1" y1="0" y2="0">
-                  <stop offset="0" stopColor="white" stopOpacity="1"/>
-                  <stop offset="1" stopColor="white" stopOpacity="0.9"/>
+                <linearGradient id="bs" x1="0" x2="1" y1="0" y2="1">
+                  <stop offset="0" stopColor="rgba(255,255,255,0.95)" />
+                  <stop offset="1" stopColor="rgba(255,255,255,0.8)" />
                 </linearGradient>
               </defs>
-              <text x="0" y="14" fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto" fontWeight="700" fontSize="14" fill="url(#gsg)">GS</text>
+              <rect x="6" y="6" width="88" height="88" rx="18" fill="none" stroke="rgba(255,255,255,0.08)" strokeWidth="6" />
+              <g transform="translate(10,12)">
+                <text x="6" y="52" fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto" fontWeight="800" fontSize="60" fill="url(#bs)">G</text>
+                <text x="34" y="62" fontFamily="Inter, system-ui, -apple-system, 'Segoe UI', Roboto" fontWeight="800" fontSize="44" fill="rgba(255,255,255,0.95)" opacity="0.95" transform="rotate(-12 34 62)">S</text>
+              </g>
             </svg>
           </div>
           <span className="text-lg font-semibold tracking-tight">{company.name}</span>
