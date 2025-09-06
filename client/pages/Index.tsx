@@ -7,20 +7,16 @@ export default function Index() {
     <div>
       {/* Hero */}
       <section className="relative">
-        <div
-          className="absolute inset-0 -z-10 bg-cover bg-center"
-          style={{
-            backgroundImage:
-              "url(https://images.unsplash.com/photo-1564540587829-9a6c93f1b1c4?q=80&w=1920&auto=format&fit=crop)",
-          }}
-        />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black/50 via-black/40 to-black/60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[hsl(var(--primary))] to-[hsl(var(--accent))]" />
+        <svg className="absolute -right-20 top-8 -z-10 opacity-20" width="400" height="400" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+          <circle cx="200" cy="200" r="160" fill="white" />
+        </svg>
         <div className="container py-24 md:py-36 text-white">
           <div className="max-w-3xl">
-            <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-medium ring-1 ring-white/20">
+            <span className="inline-flex items-center rounded-full bg-white/20 px-3 py-1 text-xs font-medium ring-1 ring-white/30">
               {company.experienceYears} ans d'expérience à Agadir
             </span>
-            <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl">
+            <h1 className="mt-6 text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl drop-shadow-md">
               {company.tagline}
             </h1>
             <p className="mt-6 text-lg text-white/90">
@@ -29,13 +25,13 @@ export default function Index() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-white shadow-lg hover:opacity-95"
               >
                 Demandez un devis <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-md bg-white/10 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/20"
+                className="inline-flex items-center gap-2 rounded-md bg-white/20 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/30"
               >
                 Nos services
               </a>
