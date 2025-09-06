@@ -7,7 +7,8 @@ export default function Contact() {
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget as HTMLFormElement;
+    const data = new FormData(form);
     const name = String(data.get("name") || "");
     const email = String(data.get("email") || "");
     const message = String(data.get("message") || "");
@@ -30,7 +31,8 @@ export default function Contact() {
         throw new Error(body?.error || "Erreur lors de l'envoi du message");
       }
 
-      (e.currentTarget as HTMLFormElement).reset();
+      // Use the stored form reference to avoid React synthetic event pooling issues
+      form.reset();
       toast({ title: "Message envoyé", description: "Nous vous répondrons sous peu." });
     } catch (err) {
       console.error(err);
