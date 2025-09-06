@@ -14,7 +14,7 @@ export function Footer() {
       <div className="container py-10 grid gap-8 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded bg-primary text-primary-foreground grid place-items-center font-bold">G</div>
+            <img src="https://cdn.builder.io/api/v1/image/assets%2F8806f0c19dd2496fae3def528f72d980%2F27917fa20e2a4851901cb54c49b4439e?format=webp&width=800" alt="GRANDI SOLUTIONS logo" className="h-8 w-8 object-contain rounded-md" />
             <span className="text-lg font-semibold tracking-tight">{company.name}</span>
           </div>
           <p className="mt-4 text-sm text-muted-foreground max-w-prose">
