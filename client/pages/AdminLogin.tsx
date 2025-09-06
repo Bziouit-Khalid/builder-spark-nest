@@ -17,7 +17,14 @@ export default function AdminLogin() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username, password }),
       });
-      const body = await res.json();
+      // Safely read body once; some environments may throw if body stream is read elsewhere
+      const text = await res.text();
+      let body: any = {};
+      try {
+        body = text ? JSON.parse(text) : {};
+      } catch (err) {
+        body = {};
+      }
       if (!res.ok) throw new Error(body?.error || "Login failed");
       // store token
       localStorage.setItem("admin_token", body.token);
