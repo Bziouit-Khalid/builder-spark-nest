@@ -1,4 +1,3 @@
-/** @import must precede all other statements */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
 
 @tailwind base;
@@ -105,5 +104,17 @@
 
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+/* Responsive logo background for small screens */
+@media (max-width: 991px) {
+  .header-logo-svg {
+    width: 100% !important;
+    background-image: url("https://cdn.builder.io/api/v1/image/assets%2F8806f0c19dd2496fae3def528f72d980%2Ffd0d5753f04b442da46e0ac2e7ddf623");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: block;
   }
 }
