@@ -22,5 +22,10 @@ export function createServer() {
   app.get("/api/demo", handleDemo);
   app.post("/api/contact", handleContact);
 
+  // Admin routes
+  app.post("/api/admin/login", handleAdminLogin);
+  app.get("/api/admin/submissions", handleGetSubmissions);
+  app.delete("/api/admin/submissions/:id", handleDeleteSubmission);
+
   return app;
 }
