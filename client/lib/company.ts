@@ -24,7 +24,7 @@ export type Project = {
 };
 
 export const company = {
-  name: "GRANDI SOLUTION",
+  name: "GRANDI SOLUTIONS",
   tagline: "Experts en plâtrerie et faux plafonds à Agadir.",
   description:
     "GRANDI SOLUTION est une entreprise marocaine spécialisée dans la plâtrerie et les faux plafonds. Basée à Agadir, nous intervenons pour des travaux soignés et durables, auprès des particuliers et des professionnels.",
