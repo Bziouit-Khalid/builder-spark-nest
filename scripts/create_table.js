@@ -1,5 +1,6 @@
-const { readFileSync } = require('fs');
-const { Client } = require('pg');
+import { readFileSync } from 'fs';
+import pg from 'pg';
+const { Client } = pg;
 
 async function main() {
   const conn = process.env.POSTGRES_URL;
