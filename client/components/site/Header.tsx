@@ -10,7 +10,7 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between">
         <a href="/" className="flex items-center gap-3">
           <div className="h-12 w-12 rounded-md bg-[hsl(var(--primary))] grid place-items-center shadow-sm ring-1 ring-black/5 overflow-hidden">
-            <svg viewBox="0 0 120 120" width="44" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <svg className="header-logo-svg" viewBox="0 0 120 120" width="44" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
               <defs>
                 <linearGradient id="gBlue" x1="0" x2="1">
                   <stop offset="0" stopColor="hsl(var(--primary))" />
