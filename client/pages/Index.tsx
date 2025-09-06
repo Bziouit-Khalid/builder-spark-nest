@@ -25,13 +25,13 @@ export default function Index() {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <a
                 href="/contact"
-                className="inline-flex items-center gap-2 rounded-md bg-gradient-to-r from-[hsl(var(--primary))] to-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-white shadow-lg hover:opacity-95"
+                className="inline-flex items-center gap-2 rounded-md bg-[hsl(var(--accent))] px-6 py-3 text-sm font-semibold text-[hsl(var(--accent-foreground))] shadow-lg hover:opacity-95"
               >
                 Demandez un devis <ArrowRight className="h-4 w-4" />
               </a>
               <a
                 href="/services"
-                className="inline-flex items-center gap-2 rounded-md bg-white/20 px-6 py-3 text-sm font-semibold text-white ring-1 ring-white/30 hover:bg-white/30"
+                className="inline-flex items-center gap-2 rounded-md border border-[hsl(var(--primary))] bg-white/5 px-6 py-3 text-sm font-semibold text-[hsl(var(--primary))] hover:bg-white/10"
               >
                 Nos services
               </a>
