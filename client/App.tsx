@@ -12,6 +12,8 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Gallery from "./pages/Gallery";
 import Contact from "./pages/Contact";
+import AdminLogin from "./pages/AdminLogin";
+import AdminDashboard from "./pages/AdminDashboard";
 import { Header } from "./components/site/Header";
 import { Footer } from "./components/site/Footer";
 
