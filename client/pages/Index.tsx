@@ -127,7 +127,7 @@ export default function Index() {
 
       {/* CTA strip */}
       <section className="container py-14">
-        <div className="rounded-2xl bg-gradient-to-r from-primary to-primary/80 px-8 py-10 text-primary-foreground md:flex md:items-center md:justify-between">
+        <div className="rounded-2xl bg-[hsl(var(--primary))] px-8 py-10 text-primary-foreground md:flex md:items-center md:justify-between">
           <div>
             <h3 className="text-2xl font-bold">Un projet en tête ?</h3>
             <p className="mt-2 text-white/90">
@@ -136,7 +136,7 @@ export default function Index() {
           </div>
           <a
             href="/contact"
-            className="mt-6 inline-flex items-center gap-2 rounded-md bg-white px-5 py-2.5 text-sm font-semibold text-primary hover:bg-white/90 md:mt-0"
+            className="mt-6 inline-flex items-center gap-2 rounded-md bg-[hsl(var(--accent))] px-5 py-2.5 text-sm font-semibold text-white md:mt-0"
           >
             Contactez-nous <ArrowRight className="h-4 w-4" />
           </a>
