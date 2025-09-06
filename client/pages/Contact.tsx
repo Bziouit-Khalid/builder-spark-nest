@@ -19,9 +19,22 @@ export default function Contact() {
 
     try {
       setSubmitting(true);
-      await new Promise((r) => setTimeout(r, 900));
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, message }),
+      });
+
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body?.error || "Erreur lors de l'envoi du message");
+      }
+
       (e.currentTarget as HTMLFormElement).reset();
       toast({ title: "Message envoyé", description: "Nous vous répondrons sous peu." });
+    } catch (err) {
+      console.error(err);
+      toast({ title: "Erreur", description: "Impossible d'envoyer le message. Réessayez plus tard." });
     } finally {
       setSubmitting(false);
     }
