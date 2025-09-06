@@ -3,7 +3,11 @@ import express from "express";
 import cors from "cors";
 import { handleDemo } from "./routes/demo";
 import { handleContact } from "./routes/contact";
-import { handleAdminLogin, handleGetSubmissions, handleDeleteSubmission } from "./routes/admin";
+import {
+  handleAdminLogin,
+  handleGetSubmissions,
+  handleDeleteSubmission,
+} from "./routes/admin";
 
 export function createServer() {
   const app = express();

@@ -23,10 +23,16 @@ export default function About() {
               <div>Forme: {company.legal.forme}</div>
               {company.legal.rc && <div>RC: {company.legal.rc}</div>}
               {company.legal.ice && <div>ICE: {company.legal.ice}</div>}
-              {company.legal.capital && <div>Capital: {company.legal.capital}</div>}
-              {!company.legal.rc && !company.legal.ice && !company.legal.capital && (
-                <div className="sm:col-span-2">Coordonnées complètes disponibles sur demande.</div>
+              {company.legal.capital && (
+                <div>Capital: {company.legal.capital}</div>
               )}
+              {!company.legal.rc &&
+                !company.legal.ice &&
+                !company.legal.capital && (
+                  <div className="sm:col-span-2">
+                    Coordonnées complètes disponibles sur demande.
+                  </div>
+                )}
             </div>
           </div>
         </div>

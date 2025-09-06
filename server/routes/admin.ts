@@ -7,7 +7,10 @@ const SUPABASE_SERVICE_ROLE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
 const ADMIN_USER = process.env.ADMIN_USER || "admin";
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD || "12345";
 
-const supabase = createClient(SUPABASE_URL || "", SUPABASE_SERVICE_ROLE_KEY || "");
+const supabase = createClient(
+  SUPABASE_URL || "",
+  SUPABASE_SERVICE_ROLE_KEY || "",
+);
 
 // Simple in-memory token store
 const tokens = new Map<string, { user: string; expiresAt: number }>();
@@ -18,8 +21,12 @@ function genToken() {
 }
 
 export const handleAdminLogin: RequestHandler = async (req, res) => {
-  const { username, password } = req.body as { username?: string; password?: string };
-  if (!username || !password) return res.status(400).json({ error: "Missing credentials" });
+  const { username, password } = req.body as {
+    username?: string;
+    password?: string;
+  };
+  if (!username || !password)
+    return res.status(400).json({ error: "Missing credentials" });
 
   if (username !== ADMIN_USER || password !== ADMIN_PASSWORD) {
     return res.status(401).json({ error: "Invalid credentials" });
@@ -50,7 +57,10 @@ export const handleGetSubmissions: RequestHandler = async (req, res) => {
     const auth = validateTokenFromHeader(req);
     if (!auth) return res.status(401).json({ error: "Unauthorized" });
 
-    const { data, error } = await supabase.from("contacts").select("*").order("created_at", { ascending: false });
+    const { data, error } = await supabase
+      .from("contacts")
+      .select("*")
+      .order("created_at", { ascending: false });
     if (error) return res.status(500).json({ error: error.message });
     return res.json({ submissions: data });
   } catch (err) {

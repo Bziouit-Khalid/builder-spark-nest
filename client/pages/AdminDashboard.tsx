@@ -12,7 +12,8 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(false);
   const [submissions, setSubmissions] = useState<Submission[]>([]);
 
-  const token = typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
+  const token =
+    typeof window !== "undefined" ? localStorage.getItem("admin_token") : null;
 
   const fetchSubmissions = async () => {
     setLoading(true);
@@ -86,10 +87,19 @@ export default function AdminDashboard() {
                   <tr key={s.id} className="border-t">
                     <td className="px-3 py-2 align-top">{s.name}</td>
                     <td className="px-3 py-2 align-top">{s.email}</td>
-                    <td className="px-3 py-2 align-top max-w-xl truncate">{s.message}</td>
-                    <td className="px-3 py-2 align-top">{new Date(s.created_at).toLocaleString()}</td>
+                    <td className="px-3 py-2 align-top max-w-xl truncate">
+                      {s.message}
+                    </td>
                     <td className="px-3 py-2 align-top">
-                      <button className="rounded bg-destructive px-3 py-1 text-white" onClick={() => del(s.id)}>Delete</button>
+                      {new Date(s.created_at).toLocaleString()}
+                    </td>
+                    <td className="px-3 py-2 align-top">
+                      <button
+                        className="rounded bg-destructive px-3 py-1 text-white"
+                        onClick={() => del(s.id)}
+                      >
+                        Delete
+                      </button>
                     </td>
                   </tr>
                 ))}

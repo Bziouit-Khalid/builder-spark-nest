@@ -28,7 +28,10 @@ export default function AdminLogin() {
       if (!res.ok) throw new Error(body?.error || "Login failed");
       // store token
       localStorage.setItem("admin_token", body.token);
-      toast({ title: "Connecté", description: "Vous êtes connecté en tant qu'admin." });
+      toast({
+        title: "Connecté",
+        description: "Vous êtes connecté en tant qu'admin.",
+      });
       navigate("/admin");
     } catch (err) {
       console.error(err);
@@ -44,10 +47,22 @@ export default function AdminLogin() {
         <h1 className="text-2xl font-bold">Admin Login</h1>
         <form onSubmit={submit} className="mt-4 grid gap-3">
           <label className="text-sm">Utilisateur</label>
-          <input value={username} onChange={(e) => setUsername(e.target.value)} className="w-full rounded-md border px-3 py-2" />
+          <input
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            className="w-full rounded-md border px-3 py-2"
+          />
           <label className="text-sm">Mot de passe</label>
-          <input value={password} onChange={(e) => setPassword(e.target.value)} type="password" className="w-full rounded-md border px-3 py-2" />
-          <button className="mt-3 inline-flex items-center justify-center rounded-md bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-white" disabled={loading}>
+          <input
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            className="w-full rounded-md border px-3 py-2"
+          />
+          <button
+            className="mt-3 inline-flex items-center justify-center rounded-md bg-[hsl(var(--accent))] px-4 py-2 text-sm font-semibold text-white"
+            disabled={loading}
+          >
             {loading ? "Connexion..." : "Se connecter"}
           </button>
         </form>

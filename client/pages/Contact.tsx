@@ -14,7 +14,10 @@ export default function Contact() {
     const message = String(data.get("message") || "");
 
     if (!name || !email || !message) {
-      toast({ title: "Champs requis", description: "Veuillez remplir tous les champs." });
+      toast({
+        title: "Champs requis",
+        description: "Veuillez remplir tous les champs.",
+      });
       return;
     }
 
@@ -33,10 +36,16 @@ export default function Contact() {
 
       // Use the stored form reference to avoid React synthetic event pooling issues
       form.reset();
-      toast({ title: "Message envoyé", description: "Nous vous répondrons sous peu." });
+      toast({
+        title: "Message envoyé",
+        description: "Nous vous répondrons sous peu.",
+      });
     } catch (err) {
       console.error(err);
-      toast({ title: "Erreur", description: "Impossible d'envoyer le message. Réessayez plus tard." });
+      toast({
+        title: "Erreur",
+        description: "Impossible d'envoyer le message. Réessayez plus tard.",
+      });
     } finally {
       setSubmitting(false);
     }
@@ -46,15 +55,23 @@ export default function Contact() {
     <section className="container py-16 md:py-24">
       <div className="grid gap-10 md:grid-cols-2">
         <div>
-          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">Contact</h1>
+          <h1 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Contact
+          </h1>
           <p className="mt-3 text-muted-foreground">
             Adresse: {company.address}
           </p>
           <p className="mt-1 text-muted-foreground">
-            Téléphone: <a className="hover:underline" href={`tel:${company.phone}`}>{company.phone}</a>
+            Téléphone:{" "}
+            <a className="hover:underline" href={`tel:${company.phone}`}>
+              {company.phone}
+            </a>
           </p>
           <p className="mt-1 text-muted-foreground">
-            Email: <a className="hover:underline" href={`mailto:${company.email}`}>{company.email}</a>
+            Email:{" "}
+            <a className="hover:underline" href={`mailto:${company.email}`}>
+              {company.email}
+            </a>
           </p>
           <div className="mt-6 overflow-hidden rounded-xl border">
             <iframe
@@ -67,20 +84,46 @@ export default function Contact() {
           </div>
         </div>
         <div>
-          <form onSubmit={onSubmit} className="rounded-xl border bg-card p-6 shadow-sm">
+          <form
+            onSubmit={onSubmit}
+            className="rounded-xl border bg-card p-6 shadow-sm"
+          >
             <h2 className="text-lg font-semibold">Envoyez-nous un message</h2>
             <div className="mt-4 grid gap-4">
               <div>
-                <label htmlFor="name" className="text-sm font-medium">Nom</label>
-                <input id="name" name="name" type="text" className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm outline-none ring-primary/20 focus:ring-2" placeholder="Votre nom" />
+                <label htmlFor="name" className="text-sm font-medium">
+                  Nom
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm outline-none ring-primary/20 focus:ring-2"
+                  placeholder="Votre nom"
+                />
               </div>
               <div>
-                <label htmlFor="email" className="text-sm font-medium">Email</label>
-                <input id="email" name="email" type="email" className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm outline-none ring-primary/20 focus:ring-2" placeholder="vous@example.com" />
+                <label htmlFor="email" className="text-sm font-medium">
+                  Email
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  className="mt-1 w-full rounded-md border bg-background px-3 py-2 text-sm outline-none ring-primary/20 focus:ring-2"
+                  placeholder="vous@example.com"
+                />
               </div>
               <div>
-                <label htmlFor="message" className="text-sm font-medium">Message</label>
-                <textarea id="message" name="message" className="mt-1 h-32 w-full resize-none rounded-md border bg-background px-3 py-2 text-sm outline-none ring-primary/20 focus:ring-2" placeholder="Décrivez votre projet" />
+                <label htmlFor="message" className="text-sm font-medium">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  className="mt-1 h-32 w-full resize-none rounded-md border bg-background px-3 py-2 text-sm outline-none ring-primary/20 focus:ring-2"
+                  placeholder="Décrivez votre projet"
+                />
               </div>
               <button
                 type="submit"

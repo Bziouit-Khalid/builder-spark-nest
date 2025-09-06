@@ -10,7 +10,15 @@ export function Header() {
       <div className="container flex h-16 items-center justify-between px-8">
         <a href="/" className="flex items-center gap-3">
           <div className="flex flex-col leading-tight">
-            <div style={{ color: "rgb(202, 112, 33)", fontSize: 18, fontWeight: 700, letterSpacing: "-0.45px", lineHeight: "28px" }}>
+            <div
+              style={{
+                color: "rgb(202, 112, 33)",
+                fontSize: 18,
+                fontWeight: 700,
+                letterSpacing: "-0.45px",
+                lineHeight: "28px",
+              }}
+            >
               GRANDI SOLUTIONS
             </div>
             <div style={{ color: "rgb(85, 99, 119)", fontSize: 12 }}>
