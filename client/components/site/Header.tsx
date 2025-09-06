@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { company } from "@/lib/company";
+import { NavLink } from "react-router-dom";
 
 const navLinkBase =
   "px-3 py-2 rounded-md text-sm font-medium transition-colors hover:text-primary hover:bg-accent/40";
@@ -7,29 +8,15 @@ const navLinkBase =
 export function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b bg-white/80 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-background/80">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between px-8">
         <a href="/" className="flex items-center gap-3">
-          <div className="h-12 w-12 rounded-md bg-[hsl(var(--primary))] grid place-items-center shadow-sm ring-1 ring-black/5 overflow-hidden">
-            <svg className="header-logo-svg" viewBox="0 0 120 120" width="44" height="44" xmlns="http://www.w3.org/2000/svg" aria-hidden>
-              <defs>
-                <linearGradient id="gBlue" x1="0" x2="1">
-                  <stop offset="0" stopColor="hsl(var(--primary))" />
-                  <stop offset="1" stopColor="hsl(var(--primary))" stopOpacity="0.9" />
-                </linearGradient>
-                <linearGradient id="gGold" x1="0" x2="1">
-                  <stop offset="0" stopColor="hsl(var(--accent))" />
-                  <stop offset="1" stopColor="hsl(var(--accent))" stopOpacity="0.95" />
-                </linearGradient>
-              </defs>
-              <g>
-                <path d="M30 40c0-0 28-14 50 0 22 14 10 48-20 56-30 8-40-10-40-26 0-18 6-30 10-30z" fill="url(#gBlue)" />
-                <path d="M74 30c10 0 18 8 18 18 0 10-8 16-18 20s-14 8-6 14 22 2 30-8" stroke="url(#gGold)" strokeWidth="6" fill="none" strokeLinecap="round" strokeLinejoin="round" />
-              </g>
-            </svg>
-          </div>
           <div className="flex flex-col leading-tight">
-            <span className="text-lg font-bold text-[hsl(var(--accent))] tracking-tight">{company.name}</span>
-            <small className="text-xs text-muted-foreground">Travaux de Construction et génie civil</small>
+            <div style={{ color: "rgb(202, 112, 33)", fontSize: 18, fontWeight: 700, letterSpacing: "-0.45px", lineHeight: "28px" }}>
+              GRANDI SOLUTIONS
+            </div>
+            <div style={{ color: "rgb(85, 99, 119)", fontSize: 12 }}>
+              Travaux de Construction et génie civil
+            </div>
           </div>
         </a>
         <nav className="hidden md:flex items-center gap-1">
