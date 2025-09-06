@@ -59,6 +59,14 @@ export function Header() {
           >
             Contact
           </NavLink>
+          <NavLink
+            to="/admin/login"
+            className={({ isActive }) =>
+              `${navLinkBase} ${isActive ? "text-primary" : "text-foreground/80"}`
+            }
+          >
+            Admin
+          </NavLink>
         </nav>
         <div className="md:hidden">
           <a
